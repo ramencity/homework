@@ -1,5 +1,6 @@
 # give the range of fibonacci numbers up to and including a final value x
-# @params x [Integer]
+# @param x [Integer]
+# @return [Array]
 def fibonacci(x)
   unless x.is_a?(Fixnum)
     raise TypeError, "'#{x}' is not a Fixnum; try again"

@@ -31,7 +31,11 @@ def fibonacci_size(y)
   a
 end
 
-def add_to_fibonacci_array(array, z)
-  array.push(z)
+# add a given number to an array and return the new number by adding the last two elements of the array
+# @param array [Array] of fibonacci numbers
+# @param number [Fixnum] to add to array
+# @return [Fixnum]
+def add_to_fibonacci_array(array, number)
+  array.push(number)
   array[-1] + array[-2]
 end

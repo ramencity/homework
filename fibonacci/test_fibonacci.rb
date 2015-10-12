@@ -13,4 +13,7 @@ class TestFibonacci < Test::Unit::TestCase
     assert_equal(1, fibonacci_size(1).size)
   end
 
+  def test_array_add_method
+    assert_equal(13, add_to_fibonacci_array([1, 1, 2, 3, 5], 8))
+  end
 end

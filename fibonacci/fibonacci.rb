@@ -9,8 +9,7 @@ def fibonacci(x)
   a = [1]
   new_number = 1
   while new_number <= x
-    a.push(new_number)
-    new_number = a[-1] + a[-2]
+    new_number = add_to_fibonacci_array(a, new_number)
   end
   a
 end
@@ -27,8 +26,12 @@ def fibonacci_size(y)
   new_number = 1
   #since we're seeding the array to start out with one element, remove that from the number of times to loop:
   (y-1).times do
-    a.push(new_number)
-    new_number = a[-1] + a[-2]
+    new_number = add_to_fibonacci_array(a, new_number)
   end
   a
+end
+
+def add_to_fibonacci_array(array, z)
+  array.push(z)
+  array[-1] + array[-2]
 end

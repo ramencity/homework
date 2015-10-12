@@ -21,4 +21,10 @@ class TestFibonacci < Test::Unit::TestCase
     assert_raise(TypeError) {fibonacci('x')}
     assert_raise(TypeError) {fibonacci_size('x')}
   end
+
+  def test_closest_fibonacci_number
+    assert_equal(4181, closest_fibonacci_to(5000))
+    assert_equal(4181, closest_fibonacci_to(4181))
+  end
+
 end
